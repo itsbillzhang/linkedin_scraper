@@ -136,6 +136,7 @@ class Person(Scraper):
 
         # get experience
         driver.execute_script(
+            print("Running Bill's version")
             "window.scrollTo(0, Math.ceil(document.body.scrollHeight*3/5));"
         )
 
@@ -198,6 +199,7 @@ class Person(Scraper):
 
         # get education
         ## Click SEE MORE
+        print("Running Bill's version")
         self._click_see_more_by_class_name("pv-education-section__see-more")
         try:
             _ = WebDriverWait(driver, 3).until(
